@@ -19,7 +19,6 @@ void main() async{
   Hive.init(document.path);
   await Hive.openBox("Storage");
   SharedPreferences prefs=await SharedPreferences.getInstance();
-  prefs.setBool('loginValue',false);
   bool login =prefs.getBool('loginValue');
   runApp(
     MaterialApp(
